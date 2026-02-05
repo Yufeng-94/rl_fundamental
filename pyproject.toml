@@ -1,0 +1,17 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "rl_fundamental"
+version = "0.1.0"
+description = ""
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+gymnasium= {extras = ["classic-control"], version = "==1.2.3"}
+jupyterlab = "==4.5.3"
+matplotlib = "==3.10.8"
+PyVirtualDisplay = "==3.0"
