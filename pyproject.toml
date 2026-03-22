@@ -15,3 +15,4 @@ gymnasium= {extras = ["classic-control"], version = "==1.2.3"}
 jupyterlab = "==4.5.3"
 matplotlib = "==3.10.8"
 PyVirtualDisplay = "==3.0"
+torch  = "==2.10.0"
