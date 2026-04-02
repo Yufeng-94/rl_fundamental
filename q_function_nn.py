@@ -6,10 +6,12 @@ class QFunctionNN(nn.Module):
         super(QFunctionNN, self).__init__()
         self.fc1 = nn.Linear(state_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, hidden_dim)
-        self.fc3 = nn.Linear(hidden_dim, action_dim)
+        self.fc3 = nn.Linear(hidden_dim, hidden_dim)
+        self.fc4 = nn.Linear(hidden_dim, action_dim)
 
     def forward(self, state):
         x = torch.relu(self.fc1(state))
         x = torch.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = torch.relu(self.fc3(x))
+        x = self.fc4(x)
         return x
